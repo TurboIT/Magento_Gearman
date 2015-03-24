@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<gearman translate="label" module="gearman">
+            <label>Gearman</label>
+            <sort_order>0</sort_order>
+        </gearman>
+	  </tabs>
+	  <sections>
+		<gearman  translate="label" module="gearman">                    
+		<label>Gearman</label>
+		<tab>gearman</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <gearman translate="label"> 
+					  <label>Gearman</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <server translate="label">
+                            <label>Server</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </server>
+					   </fields>
+					   <fields>
+                          <port translate="label">
+                            <label>Port</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </port>
+					   </fields>
+					   </gearman>
+					</groups>
+		</gearman>
+	  </sections>
+</config>
