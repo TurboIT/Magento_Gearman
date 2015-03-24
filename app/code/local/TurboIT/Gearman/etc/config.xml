@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-  <modules>
-    <TurboIT_Gearman>
-      <version>0.1.0</version>
-    </TurboIT_Gearman>
-  </modules>
-  <global>
+  	<modules>
+    	<TurboIT_Gearman>
+      		<version>0.1.0</version>
+    	</TurboIT_Gearman>
+  	</modules>
+  	<global>
     <models>
-      <gearman>
-        <class>TurboIT_Gearman_Model</class>
-        <resourceModel>gearman_resource</resourceModel>
-      </gearman>
-      <gearman_resource>
-        <class>TurboIT_Gearman_Model_Resource</class>
-        <entities>
-          <gearman_job>
-            <table>gearman_job</table>
-          </gearman_job>
-        </entities>
-      </gearman_resource>
+      	<turboit_gearman>
+        	<class>TurboIT_Gearman_Model</class>
+        	<resourceModel>gearman_resource</resourceModel>
+      	</turboit_gearman>
+      	<gearman_resource>
+        	<class>TurboIT_Gearman_Model_Resource</class>
+        	<entities>
+          		<gearman_job>
+            		<table>gearman_job</table>
+          		</gearman_job>
+        	</entities>
+      	</gearman_resource>
     </models>
     <resources>
-      <gearman_write>
-        <connection>
-          <use>core_write</use>
-        </connection>
-      </gearman_write>
-      <gearman_read>
-        <connection>
-          <use>core_read</use>
-        </connection>
-      </gearman_read> 
+		<turboit_gearman_setup>
+			<setup>
+				<module>TurboIT_Gearman</module>
+			</setup>
+		</turboit_gearman_setup>
+		<turboit_gearman_write>
+			<connection>
+				<use>core_write</use>
+			</connection>
+		</turboit_gearman_write>
+		<turboit_gearman_read>
+        	<connection>
+          		<use>core_read</use>
+        	</connection>
+      	</turboit_gearman_read> 
     </resources>
-    <blocks>
-      <gearman>
-        <class>TurboIT_Gearman_Block</class>
-      </gearman>
-    </blocks>
     <helpers>
-      <gearman>
+      <turboit_gearman>
         <class>TurboIT_Gearman_Helper</class>
-      </gearman>
+      </turboit_gearman>
     </helpers>
   </global>
   <crontab>
@@ -51,24 +51,4 @@
       </gearman_job_scheduler>
     </jobs>
   </crontab>
-  <adminhtml>
-    <layout>
-      <updates>
-        <gearman_index>
-          <file>turboit/gearman.xml</file>
-        </gearman_index>
-      </updates>
-    </layout>
-  </adminhtml>
-  <admin>
-    <routers>
-        <adminhtml>
-            <args>
-                <modules>
-                    <gearman before="Mage_Adminhtml">TurboIT_Gearman_Adminhtml</gearman>
-                </modules>
-            </args>
-        </adminhtml>
-    </routers>
-  </admin>
 </config>

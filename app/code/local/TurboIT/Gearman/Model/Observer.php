@@ -18,7 +18,7 @@ class TurboIT_Gearman_Model_Observer
     	$gearmanclient 	= new GearmanClient();
       $gearmanclient->addServer($server, $port);
 
-      $jobs = Mage::getModel('gearman/gearmanjob')
+      $jobs = Mage::getModel('turboit_gearman/gearmanjob')
         		->getCollection()
         		->addFieldToFilter('execute_after', array('lteq' => Mage::getModel('core/date')->gmtDate()))
         		->load();

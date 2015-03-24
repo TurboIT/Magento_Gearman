@@ -16,6 +16,6 @@ class TurboIT_Gearman_Model_Resource_Gearmanjob extends Mage_Core_Model_Resource
      */
     protected function _construct()
     {
-        $this->_init('gearman/gearman_job', 'job_id');
+        $this->_init('turboit_gearman/gearman_job', 'job_id');
     }
 }

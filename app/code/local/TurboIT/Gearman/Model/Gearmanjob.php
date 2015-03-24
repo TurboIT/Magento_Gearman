@@ -12,7 +12,7 @@ class TurboIT_Gearman_Model_Gearmanjob extends Mage_Core_Model_Abstract
 {
     protected function _construct()
     {
-        $this->_init('gearman/gearmanjob');
+        $this->_init('turboit_gearman/gearmanjob');
         $this->setData('submitted_date',  date("Y-m-d H:i:s"));
     }   
 }

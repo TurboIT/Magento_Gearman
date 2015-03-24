@@ -12,7 +12,7 @@ class TurboIT_Gearman_Helper_Data extends Mage_Core_Helper_Abstract
 {
 	public function queueGearmanJob($job_name, $data, $execute_after = null)
 	{
-		$jobs = Mage::getModel('gearman/gearmanjob');
+		$jobs = Mage::getModel('turboit_gearman/gearmanjob');
 
 		$jobs->setData('task', $job_name);
 		$jobs->setData('data', serialize($data));
