@@ -16,3 +16,4 @@ Requirements :
 Gearman PHP module. (PECL)
 Cron must be configured and running for magento.
 
+https://www.turboit.co.uk/blog/gearman-magento-queue/
